@@ -1,23 +1,5 @@
 ## Moon Tech RTK Query Practice
 
-### Topic : [help]()
+### Structure
 
-- info
-
-### Topic
-
-- info
-
-### Topic
-
-- info
-- info : infoDetails
-
-### Topic
-
-- info :
-- - nested info
-- - - nested info
-- - - - nested info
-
-#### additional Information
+- src > features > api > apiSlice.js
