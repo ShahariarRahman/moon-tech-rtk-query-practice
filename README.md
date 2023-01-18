@@ -3,3 +3,7 @@
 ### Structure
 
 - src > features > api > apiSlice.js
+
+### createApi
+
+- import { createApi } from "@reduxjs/toolkit/query/react"
