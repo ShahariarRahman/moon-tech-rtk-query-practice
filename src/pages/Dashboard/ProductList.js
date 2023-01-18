@@ -1,10 +1,16 @@
 import React from "react";
-import { useGetProductsQuery } from "../../features/api/apiSlice";
+import {
+  useGetProductsQuery,
+  useRemoveProductMutation,
+} from "../../features/api/apiSlice";
 
 const ProductList = () => {
   const { data: products, isLoading } = useGetProductsQuery();
 
-  if (isLoading) {
+  const [deleteProduct, { isLoading: deleteLoading, isSuccess }] =
+    useRemoveProductMutation();
+
+  if (isLoading || deleteLoading) {
     return <h1>Loading ... </h1>;
   }
 
@@ -66,7 +72,7 @@ const ProductList = () => {
                   </td>
                   <td className="p-2">
                     <div className="flex justify-center">
-                      <button>
+                      <button onClick={() => deleteProduct(_id)}>
                         <svg
                           className="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
                           fill="none"
