@@ -9,6 +9,12 @@
 - import { createApi } from "@reduxjs/toolkit/query/react"
 - export const productApi = createApi({})
 - - reducerPath
+- - baseQuery
+
+### baseQuery
+
+- baseQuery: fetchBaseQuery({}),
+- -
 
 ### store.js set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#add-the-service-to-your-store)
 
