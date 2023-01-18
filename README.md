@@ -1,11 +1,17 @@
 ## Moon Tech RTK Query Practice
 
-### Structure
+### Structure :
 
 - src > features > api > apiSlice.js
 
-### createApi
+### createApi initial set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#create-an-api-service)
 
 - import { createApi } from "@reduxjs/toolkit/query/react"
-- export const productApi = createApi({});
+- export const productApi = createApi({})
 - - reducerPath
+
+### store.js set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#add-the-service-to-your-store)
+
+- configureStore({})
+- - reducer: { [productApi.reducerPath]: productApi.reducer, }
+- - middleware:
