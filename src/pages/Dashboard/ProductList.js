@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useGetProductsQuery } from "../../features/api/apiSlice";
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
+  const { data: products, isLoading } = useGetProductsQuery();
 
-  useEffect(() => {
-    fetch("http://localhost:5000/product")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  });
+  if (isLoading) {
+    return <h1>Loading ... </h1>;
+  }
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full ">
