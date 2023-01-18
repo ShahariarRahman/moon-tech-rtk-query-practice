@@ -11,7 +11,7 @@ const store = configureStore({
     filter: filterSlice,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(productApi),
+    getDefaultMiddleware().concat(productApi.middleware),
 });
 
 export default store;
