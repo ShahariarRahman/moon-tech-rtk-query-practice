@@ -29,3 +29,7 @@
 - configureStore({})
 - - reducer: { [productApi.reducerPath]: productApi.reducer, }
 - - middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productApi.middleware),
+
+#### refetchOnMountOrArgChange
+
+- fetch data each when the page render
