@@ -14,4 +14,4 @@
 
 - configureStore({})
 - - reducer: { [productApi.reducerPath]: productApi.reducer, }
-- - middleware:
+- - middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productApi),

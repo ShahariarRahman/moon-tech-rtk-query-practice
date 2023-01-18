@@ -10,6 +10,8 @@ const store = configureStore({
     cart: cartSlice,
     filter: filterSlice,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(productApi),
 });
 
 export default store;
