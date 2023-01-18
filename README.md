@@ -14,7 +14,7 @@
 ### baseQuery
 
 - baseQuery: fetchBaseQuery({}),
-- -
+- - baseUrl: () => ({}),
 
 ### store.js set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#add-the-service-to-your-store)
 
