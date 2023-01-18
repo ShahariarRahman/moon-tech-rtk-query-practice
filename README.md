@@ -14,7 +14,7 @@
 ### baseQuery
 
 - baseQuery: fetchBaseQuery({}),
-- - baseUrl: () => ({}),
+- - baseUrl: "http://localhost:5000"
 
 ### store.js set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#add-the-service-to-your-store)
 
