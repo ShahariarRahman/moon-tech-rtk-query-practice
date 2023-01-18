@@ -33,3 +33,9 @@
 #### refetchOnMountOrArgChange
 
 - fetch data each when the page render
+
+#### Automated Re-fetching
+
+- tagTypes
+- providesTags
+- invalidatesTags

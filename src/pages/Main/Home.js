@@ -7,9 +7,7 @@ import { toggle, toggleBrand } from "../../features/filter/filterSlice";
 const Home = () => {
   const { stock, brands } = useSelector((state) => state.filter);
 
-  const { data: products, isLoading } = useGetProductsQuery(null, {
-    refetchOnMountOrArgChange: true,
-  });
+  const { data: products, isLoading } = useGetProductsQuery();
 
   const dispatch = useDispatch();
 
