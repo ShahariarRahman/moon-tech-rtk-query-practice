@@ -4,7 +4,7 @@
 
 - src > features > api > apiSlice.js
 
-### createApi initial set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#create-an-api-service)
+### createApi initial set up : [details](https://redux-toolkit.js.org/tutorials/rtk-query#create-an-api-service)
 
 - import { createApi } from "@reduxjs/toolkit/query/react"
 - export const productApi = createApi({})
@@ -25,7 +25,7 @@
 - - - query: () => ({}),
 - - - - url: "/product",
 
-### store.js set up : [help](https://redux-toolkit.js.org/tutorials/rtk-query#add-the-service-to-your-store)
+### store.js set up : [details](https://redux-toolkit.js.org/tutorials/rtk-query#add-the-service-to-your-store)
 
 - configureStore({})
 - - reducer: { [productApi.reducerPath]: productApi.reducer, }
@@ -37,10 +37,10 @@
 
 #### Automated Re-fetching
 
-- tagTypes
+- tagTypes [details](https://redux-toolkit.js.org/rtk-query/usage/automated-refetching#cache-tags)
 - - cache the tags
-- providesTags
+- providesTags [details](https://redux-toolkit.js.org/rtk-query/usage/automated-refetching#providing-cache-data)
 - - add tags in cache
 - - re-fetch this query if those tags invalidated
-- invalidatesTags
+- invalidatesTags [details](https://redux-toolkit.js.org/rtk-query/usage/automated-refetching#invalidating-cache-data)
 - - invalidates tags so that data can re-fetch.
