@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { toast } from "react-hot-toast";
 import {
   useGetProductsQuery,
   useRemoveProductMutation,
@@ -10,7 +11,16 @@ const ProductList = () => {
   const [deleteProduct, { isLoading: deleteLoading, isSuccess }] =
     useRemoveProductMutation();
 
-  if (isLoading || deleteLoading) {
+  useEffect(() => {
+    if (deleteLoading) {
+      toast.loading("Deleting Products...", { id: "deleteProduct" });
+    }
+    if (isSuccess) {
+      toast.success("Product Deleted", { id: "deleteProduct" });
+    }
+  }, [deleteLoading, isSuccess]);
+
+  if (isLoading) {
     return <h1>Loading ... </h1>;
   }
 

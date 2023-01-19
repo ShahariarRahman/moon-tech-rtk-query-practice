@@ -10,6 +10,7 @@
 - export const productApi = createApi({})
 - - reducerPath
 - - baseQuery
+- - tagTypes
 - - endpoints
 
 ### baseQuery
@@ -32,10 +33,14 @@
 
 #### refetchOnMountOrArgChange
 
-- fetch data each when the page render
+- fetch data each time when the page render
 
 #### Automated Re-fetching
 
 - tagTypes
+- - cache the tags
 - providesTags
+- - add tags in cache
+- - re-fetch this query if those tags invalidated
 - invalidatesTags
+- - invalidates tags so that data can re-fetch.
